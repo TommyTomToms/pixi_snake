@@ -28,6 +28,7 @@ let speed = 100;
 let key_down = "right";
 let x_pos    = 45;
 let y_pos    = 24;
+let pause    = true; //Snake initialy paused
 
 let x_mouse = Math.floor(Math.random() * (82 - 2 + 1)) + 2;
 let y_mouse = Math.floor(Math.random() * (46 - 2 + 1)) + 2;
@@ -47,6 +48,13 @@ function initialize() {
     document.body.appendChild(app.view);
 
     app.stage.addChild(graphics);
+
+	//Initial Draw
+	drawGrid();
+	
+	drawSnake(x_pos, y_pos);
+
+	drawPixel(x_mouse,y_mouse);
 }
 
 //-----------------------------------------------------------------------------
@@ -190,11 +198,14 @@ initialize();
 //-----------------------------------------------------------------------------
 function gameLoop() {
 
-	drawGrid();
-	
-	drawSnake(x_pos, y_pos);
+	if (pause == false) {
 
-	drawPixel(x_mouse,y_mouse);
+		drawGrid();
+	
+		drawSnake(x_pos, y_pos);
+
+		drawPixel(x_mouse,y_mouse);
+	}
 }
 
 setInterval(gameLoop, speed);
@@ -229,6 +240,19 @@ document.onkeydown = function (e) {
 		case "ArrowLeft":
 
 			if(key_down != "right") {key_down="left";}
+
+			break;
+
+		case " ":
+
+			if (pause == true) {
+
+				pause = false;
+			}
+			else {
+
+				pause = true;
+			}
 
 			break;
 	}
