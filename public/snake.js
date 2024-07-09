@@ -243,6 +243,7 @@ document.onkeydown = function (e) {
 
 			break;
 
+		//Pause
 		case " ":
 
 			if (pause == true) {
