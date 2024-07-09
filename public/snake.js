@@ -15,6 +15,7 @@ resolution of 84 x 48 pixels
 // <canvas id="myCanvas" width="683" height="455" style="border:8px solid #076e21; width:683; height:455;">
 
 
+
 const lineColor = "#43523d";
 const fillColor = "#c7f0d8";
 const gridSize  = 8;
