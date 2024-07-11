@@ -9,13 +9,6 @@ resolution of 84 x 48 pixels
 // var randomnumber = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 // var randomnumber = Math.floor(Math.random() * (82 - 2 + 1)) + 2;
 
-// var renderer = new PIXI.WebGLRenderer(800, 600, { view: myCanvas });
-// let app = new PIXI.Application({width:683, height:455, antialias:true, view:myCanvas});
-// document.getElementById("myCanvas").appendChild(app.view);
-// <canvas id="myCanvas" width="683" height="455" style="border:8px solid #076e21; width:683; height:455;">
-
-
-
 const lineColor = "#43523d";
 const fillColor = "#c7f0d8";
 const gridSize  = 8;
@@ -36,7 +29,7 @@ let x_mouse = Math.floor(Math.random() * (82 - 2 + 1)) + 2;
 let y_mouse = Math.floor(Math.random() * (46 - 2 + 1)) + 2;
 
 let graphics = new PIXI.Graphics();
-let app = new PIXI.Application({ width: window.innerWidth , height: window.innerHeight});
+let app = new PIXI.Application({ width: 672 , height: 384, view: mainCanvas});
 
 //-----------------------------------------------------------------------------
 // Initialize Graphics
@@ -48,6 +41,7 @@ function initialize() {
     app.renderer.background.color = 0xFFFFFF; 
 
     document.body.appendChild(app.view);
+	// document.getElementById("mainCanvas").appendChild(app.view);
 
     app.stage.addChild(graphics);
 
