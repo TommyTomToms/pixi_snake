@@ -5,9 +5,10 @@ resolution of 84 x 48 pixels
 #879188, #1a1914
 */
 
-// TODO: Mouse disappears into the borders (Look at Math random bounds)
-// var randomnumber = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
-// var randomnumber = Math.floor(Math.random() * (82 - 2 + 1)) + 2;
+// TODO:
+// Game Menu
+// Display Score
+// Game Over Screen
 
 const lineColor = "#43523d";
 const fillColor = "#c7f0d8";
