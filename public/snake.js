@@ -41,17 +41,14 @@ function initialize() {
 
     app.renderer.background.color = 0xFFFFFF; 
 
-    document.body.appendChild(app.view);
-	// document.getElementById("mainCanvas").appendChild(app.view);
-
-    app.stage.addChild(graphics);
-
 	//Initial Draw
 	drawGrid();
 	
 	drawSnake(x_pos, y_pos);
 
 	drawPixel(x_mouse,y_mouse);
+
+	app.stage.addChild(graphics);
 }
 
 //-----------------------------------------------------------------------------

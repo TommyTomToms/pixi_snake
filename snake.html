@@ -4,16 +4,20 @@
 	<head>
     	<meta charset="UTF-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- Get rid of favicon error -->
     	<title>Snake Game in Pixi.js</title>
-    	<link rel="stylesheet" href="./style.css">
-    	<link rel="icon" href="./favicon.ico" type="image/x-icon">
   	</head>
 
   	<body style="margin:0%; overflow: hidden;">
 
 		<div>
-			<canvas id="mainCanvas" style="display: block; margin: 0 auto;"></canvas>
+			<div style="margin-top: 50px;">
+				<canvas id="mainCanvas" style="display: block; margin: 0 auto;"></canvas>
+			</div>
+			
+			<div style="display: flex; justify-content: center; height: 100vh;">
+				<h2>Press SPACEBAR to start/pause..</h2>
+			</div>
 		</div>
 
 		<script src="public/pixi.js"></script>
